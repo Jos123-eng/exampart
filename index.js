@@ -14,13 +14,6 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/', pintoresRouter);
 
-app.get('/popo', (req, res)=>{
-    res.render('popo', {
-
-        title:"Inicio"
-    });
-});
-
 mongoose.Promise = global.Promise;
 const cadena = 'mongodb+srv://anonymous:locoperomoco@cluster0-bsb93.mongodb.net/pintores?retryWrites=true&w=majority';
 mongoose.connect(cadena,{useNewUrlParser: true, useUnifiedTopology: true})
